@@ -8,5 +8,6 @@ RUN unzip photosec.zip
 RUN rm -rf photosec.zip && \
     cp -rf photosec-html/* . && \
     rm -rf photosec-html
+    touch hello
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
